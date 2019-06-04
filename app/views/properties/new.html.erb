@@ -1,0 +1,24 @@
+<%= form_for(@property) do |f| %>
+  <%= f.label "Address" %>
+  <%= f.text_field :address %>
+
+  <%= f.label "State" %>
+  <%= f.text_field :state %>
+
+  <%= f.label "Zip Code" %>
+  <%= f.text_field :zipcode %>
+
+  <%= f.label "Bedrooms" %>
+  <%= f.text_field :bedrooms %>
+
+  <%= f.label "Bathrooms" %>
+  <%= f.text_field :bathrooms %>
+
+  <%= f.label "Maximum Capacity" %>
+  <%= f.text_field :max_guests %>
+
+  <%= f.label "Description" %>
+  <%= f.text_area :description %>
+
+  <%= f.submit "Create New Rental Property" %>
+<% end %>
