@@ -1,21 +1,21 @@
 class RentalsController < ApplicationController
   def new
-    @rental = rental.new
+    @rental = Rental.new
   end
 
   def create
-    @rental = rental.create(rental_params)
-    @rental.save
-    redirect_to rental_path(@rental)
+    @rental = Rental.create!(rental_params)
+
+    redirect_to rentals_path(@rental)
   end
 
   def show
     puts params
-    @rental = rental.find_by(params[:id])
+    @rental = Rental.find_by(params[:id])
   end
 
   private
   def rental_params
-    params.require(:rental).permit(:address, :zipcode, :state, :bedrooms, :bathrooms, :max_guests, :description)
+    params.require(:rental).permit(:address, :zipcode, :state, :bedrooms, :bathrooms, :max_guests, :description, :user_id)
   end
 end

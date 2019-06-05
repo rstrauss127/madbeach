@@ -8,6 +8,7 @@ class CreateProperties < ActiveRecord::Migration[5.2]
       t.float :bathrooms
       t.integer :max_guests
       t.string :description
+      t.integer :user_id
     end
   end
 end

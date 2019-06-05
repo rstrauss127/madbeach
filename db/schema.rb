@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_175711) do
     t.float "bathrooms"
     t.integer "max_guests"
     t.string "description"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
