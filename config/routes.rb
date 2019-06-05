@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
 
   resource :users, only: [:new, :create, :show]
-  resource :properties, only: [:new, :create]
+  resource :rentals, only: [:new, :create, :show]
 end
